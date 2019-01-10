@@ -1,5 +1,5 @@
 package com.rtjvm.scala.oop.files
 
-class DirEntry {
+abstract class DirEntry(val parentPath: String, val name: String) {
 
 }

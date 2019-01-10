@@ -1,5 +1,12 @@
 package com.rtjvm.scala.oop.commands
 
-trait Command {
+import com.rtjvm.scala.oop.filesystem.State
 
+trait Command {
+  def apply(state: State): State
+}
+
+object Command {
+  def from(input: String): Command =
+    new UnknownCommand
 }
