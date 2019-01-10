@@ -15,6 +15,5 @@ object Filesystem extends App {
     state.show
     val input = scanner.nextLine()
     state = Command.from(input).apply(state)
-
   }
 }
