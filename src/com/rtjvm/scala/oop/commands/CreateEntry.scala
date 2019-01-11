@@ -80,7 +80,6 @@ abstract class CreateEntry(name: String) extends Command {
     val allDirsInPath = wd.getAllFoldersInPath
 
     // 2. create new directory entry in the wd
-    // TODO implement this
     val newEntry: DirEntry = createSpecificEntry(state)
     // val newDir = Directory.empty(wd.path, name)
 
