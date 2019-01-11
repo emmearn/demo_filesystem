@@ -8,6 +8,10 @@ class File(override val parentPath: String, override val name: String, contests:
 
   override def asFile: File = this
 
+  def isDirectory =  false
+
+  def isFile =  true
+
   override def getType: String = "File"
 }
 

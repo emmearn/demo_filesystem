@@ -33,6 +33,8 @@ class Directory(override val parentPath: String, override val name: String, val 
     findEntryHelper(entryName, contents)
   }
 
+  def isRoot: Boolean = parentPath.isEmpty
+
   def replaceEntry(entryName: String, newEntry: DirEntry): Directory =
     new Directory(parentPath, name, contents.filter(e => !e.name.equals(entryName)) :+ newEntry)
 
@@ -40,6 +42,10 @@ class Directory(override val parentPath: String, override val name: String, val 
 
   def asFile: File =
     throw new FilesystemException("A directory cannot be converted to a file!")
+
+  def isDirectory =  true
+
+  def isFile =  false
 
   def getType: String = "Directory"
 }
