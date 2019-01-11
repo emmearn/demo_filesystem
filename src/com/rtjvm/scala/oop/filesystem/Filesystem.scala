@@ -16,4 +16,9 @@ object Filesystem extends App {
     val input = scanner.nextLine()
     state = Command.from(input).apply(state)
   }
+  // TODO
+  /* io.Source.stdin.getLines().foldLeft(State(root, root))((currentState, newLine) => {
+    currentState.show
+    Command.from(newLine).apply(currentState)
+  }) */
 }

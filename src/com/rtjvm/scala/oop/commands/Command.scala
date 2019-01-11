@@ -2,6 +2,7 @@ package com.rtjvm.scala.oop.commands
 
 import com.rtjvm.scala.oop.filesystem.State
 
+// TODO extends (State => State) and eliminate apply method
 trait Command {
   def apply(state: State): State
 }
